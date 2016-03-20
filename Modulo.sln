@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModuloExperiment", "Modulo\ModuloExperiment.fsproj", "{F055545F-FAC3-48F6-B0E9-3ADA6397191C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralsCSharp", "RomanNumeralsCSharp\RomanNumeralsCSharp.csproj", "{5DDBC379-06A1-4DE1-902D-9B19752041AB}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RomanNumeralsFSharp", "RomanNumeralsFSharp\RomanNumeralsFSharp.fsproj", "{10E52051-2FD4-492A-8EFB-1552DD25946C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F055545F-FAC3-48F6-B0E9-3ADA6397191C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F055545F-FAC3-48F6-B0E9-3ADA6397191C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F055545F-FAC3-48F6-B0E9-3ADA6397191C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DDBC379-06A1-4DE1-902D-9B19752041AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDBC379-06A1-4DE1-902D-9B19752041AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDBC379-06A1-4DE1-902D-9B19752041AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDBC379-06A1-4DE1-902D-9B19752041AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E52051-2FD4-492A-8EFB-1552DD25946C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E52051-2FD4-492A-8EFB-1552DD25946C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E52051-2FD4-492A-8EFB-1552DD25946C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E52051-2FD4-492A-8EFB-1552DD25946C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
