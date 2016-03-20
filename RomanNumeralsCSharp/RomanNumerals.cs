@@ -43,7 +43,7 @@ namespace RomanNumeralsCSharp
             var result = "";
             var value = number;
             result += GetLetters(value, 'M', 1000);
-            value = value%1000;
+            value = value % 1000;
             result += GetLetters(value, 'D', 500);
             value = value % 500;
             result += GetLetters(value, 'C', 100);
@@ -67,7 +67,7 @@ namespace RomanNumeralsCSharp
 
         private static string GetLetters(int value, char letter, int amountPerLetter)
         {
-            var remainder = value%amountPerLetter;
+            var remainder = value % amountPerLetter;
             var numLetters = (value - remainder)/amountPerLetter;
             return new String(letter, numLetters);
         }

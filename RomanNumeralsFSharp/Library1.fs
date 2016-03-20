@@ -11,6 +11,12 @@ module Tests =
 
     let numerals = [|'M', 'D', 'C', 'L', 'X', 'V', 'I'|]    
 
+
+    type RomanNumerals =
+        static member ValidInteger = Arb.Default.Int32
+
+
+
     [<Property>]
     let ``To Rome and back gives the same result`` number =
         let result = 
@@ -19,16 +25,16 @@ module Tests =
             |> RomanNumerals.ToInteger
         result = number
 
-    [<Property>]
-    let ``Ends with a max of 3 I's`` number =
-        let numTrailingIs = 
-            number
-            |> RomanNumerals.ToRoman
-            |> Seq.toList
-            |> List.rev
-            |> Seq.takeWhile (fun c -> c = 'I')
-            |> Seq.length
-        numTrailingIs = 3
+//    [<Property>]
+//    let ``Ends with a max of 3 I's`` number =
+//        let numTrailingIs = 
+//            number
+//            |> RomanNumerals.ToRoman
+//            |> Seq.toList
+//            |> List.rev
+//            |> Seq.takeWhile (fun c -> c = 'I')
+//            |> Seq.length
+////        numTrailingIs = 3
 
 //    [<Property>]
 //    let ``Roman numerals are always descending`` number =
