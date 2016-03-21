@@ -82,6 +82,11 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <ProjectReference Include="..\RomanNumeralsCSharp\RomanNumeralsCSharp.csproj">
+      <Name>RomanNumeralsCSharp</Name>
+      <Project>{5ddbc379-06a1-4de1-902d-9b19752041ab}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <Reference Include="xunit.abstractions">
       <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
       <Private>True</Private>
@@ -98,13 +103,6 @@
       <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RomanNumeralsCSharp\RomanNumeralsCSharp.csproj">
-      <Name>RomanNumeralsCSharp</Name>
-      <Project>{5ddbc379-06a1-4de1-902d-9b19752041ab}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
