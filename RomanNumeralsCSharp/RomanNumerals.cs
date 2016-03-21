@@ -1,7 +1,5 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
-using System.Text;
 using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
@@ -17,7 +15,7 @@ namespace RomanNumeralsCSharp
                 .Replace("IV", "IIII")
                 .Replace("IX", "VIIII")
                 .Replace("XL", "XXXX")
-                .Replace("XC", "LXXXX")
+                .Replace("XC", "LXXX")
                 .Replace("CD", "CCCC")
                 .Replace("CM", "DCCCC")
                 .Sum(c => c.GetArabicValue());
@@ -59,7 +57,7 @@ namespace RomanNumeralsCSharp
             return result
                 .Replace("DCCCC", "CM")
                 .Replace("CCCC", "CD")
-                .Replace("LXXXX", "XC")
+                .Replace("LXXX", "XC")
                 .Replace("XXXX", "XL")
                 .Replace("VIIII", "IX")
                 .Replace("IIII", "IV");
