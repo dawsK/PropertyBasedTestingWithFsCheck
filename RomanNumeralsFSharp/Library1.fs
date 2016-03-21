@@ -9,13 +9,23 @@ open RomanNumeralsCSharp
 
 module Tests =
 
-    
+    type RomanNumeral = | M | D | C | L | X | V 
+
+    let numeralToString (n : RomanNumeral) = sprintf "%A" n
 
     type RomanNumerals =
+
         static member ValidInteger = 
             Arb.Default.Int32() 
             |> Arb.filter (fun i -> i >= 1)
             |> Arb.filter (fun i -> i <= 3999)
+
+        static member ValidNumeral =
+            Gen.elements ["M"; "D"; "C"; "L"; "X"; "V"; "I"]
+            |> Arb.fromGen
+
+        
+
 
     type RomanNumeralProperty () =
         inherit PropertyAttribute(Arbitrary = [|typeof<RomanNumerals>|])
@@ -53,6 +63,14 @@ module Tests =
     let ``Repeats 'V' a maximum of 1 time`` number =
         let result = number |> RomanNumerals.ToRoman
         result |> hasMaxRepeats 1 "V"
+
+    [<RomanNumeralProperty>]
+    let ``Repeats any valid numeral a max of 3 times`` numeral number =
+        let romanNumeral = numeralToString numeral
+        let result = number |> RomanNumerals.ToRoman
+        result |> hasMaxRepeats 3 romanNumeral
+
+        
 
 //    [<Property>]
 //    let ``Ends with a max of 3 I's`` number =
