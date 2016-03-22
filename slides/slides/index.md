@@ -219,12 +219,12 @@ $ ab \mod n = \\ [(a \mod n)(b \mod n)] \mod n $
 
 ### <span class="yellow">Features</span> ###
 
-- F# or C#
 - Asserts your properties multiple times with random data
 - Automatic input shrinking
 - Conditional Properties
 - Classifying test cases
 - Custom input generators
+- F# or C#
 
 ---
 
