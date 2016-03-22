@@ -13,7 +13,8 @@
 
 <div>
     <div><i class="fa fa-user"></i> Dawson Kroeker</div>
-    <div><i class="fa fa-envelope"></i> dkroeker@gmail.com</div>
+    <div><i class="fa fa-building"></i> Online Business Systems</div>
+    <div><i class="fa fa-envelope"></i> dkroeker@obsglobal.com</div>
     <div><i class="fa fa-github-square"></i> github.com/dawsk</div>
 </div>
 
