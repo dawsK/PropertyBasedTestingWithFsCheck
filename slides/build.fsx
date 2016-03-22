@@ -12,7 +12,7 @@
 let gitOwner = "dawsK"
 let gitHome = "https://github.com/" + gitOwner
 // The name of the project on GitHub
-let gitProjectName = "PropertyBasedTestingWithFsCheck_Slides"
+let gitProjectName = "PropertyBasedTestingWithFsCheck"
 
 open FsReveal
 open Fake
