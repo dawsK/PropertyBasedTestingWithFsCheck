@@ -25,3 +25,4 @@ This will start up a local HTTP server that hosts the slides and also fire up yo
 
 ## To View Demos
 
+Open the `demo` folder and run the `PropertyBasedTestingDemo.sln` solution with Visual Studio.
