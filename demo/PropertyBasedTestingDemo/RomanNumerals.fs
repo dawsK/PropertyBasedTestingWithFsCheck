@@ -1,9 +1,6 @@
 ﻿module PropertyBasedTestingDemo.RomanNumerals
 
 open System
-open FsUnit.Xunit
-open FsCheck
-open FsCheck.Xunit
 open System.Collections.Generic
 
 let ToInteger (roman:String) =
@@ -46,59 +43,7 @@ let ToRomanNumeral number =
 
 module PropertyTests =
 
-    type Thousands = | Thousands of int with
-        static member op_Explicit(Thousands i) = i
+    open FsCheck
+    open FsCheck.Xunit
+
     
-    type RomanNumeralTypes =
-        static member ValidInteger = 
-            Gen.elements [1 .. 3999]
-            |> Arb.fromGen
-
-        static member Thousands =
-            Gen.elements [1000 .. 3999]
-            |> Arb.fromGen
-            |> Arb.convert Thousands int
-       
-    type RomanNumeralProperty () =
-        inherit PropertyAttribute(Arbitrary = [|typeof<RomanNumeralTypes>|])
-
-    [<RomanNumeralProperty>]
-    let ``Split by digit and reassemble`` number =
-        let numberAt n = (number % (10 * n) / n) * n
-        let ones = numberAt 1 |> ToRomanNumeral
-        let tens = numberAt 10 |> ToRomanNumeral
-        let hundreds = numberAt 100 |> ToRomanNumeral
-        let thousands = numberAt 1000 |> ToRomanNumeral
-
-        let reassembled = sprintf "%s%s%s%s" thousands hundreds tens ones
-        let result = number |> ToRomanNumeral
-
-        result = reassembled
-
-    [<RomanNumeralProperty>]
-    let ``To Rome and back gives the same result`` number =
-        let result = 
-            number 
-            |> ToRomanNumeral
-            |> ToInteger
-        result = number
-
-    [<RomanNumeralProperty>]
-    let ``Always uses valid characters`` number =
-        let isRomanNumeral c = "MDCLXVI" |> String.exists (fun x -> x = c)
-
-        let result = number |> ToRomanNumeral
-        result |> String.forall isRomanNumeral
-
-    [<RomanNumeralProperty>]
-    let ``1000 is represented by M`` (Thousands number) =
-        let hasCorrectMs result = 
-            let expected = number / 1000
-            let numMs = result |> Seq.takeWhile (fun l -> l = 'M') |> Seq.length
-            numMs = expected
-
-        number |> ToRomanNumeral |> hasCorrectMs
-        |> Prop.classify (number / 1000 = 0) "<1000"
-        |> Prop.classify (number / 1000 = 1) "M"
-        |> Prop.classify (number / 1000 = 2) "MM"
-        |> Prop.classify (number / 1000 = 3) "MMM"
