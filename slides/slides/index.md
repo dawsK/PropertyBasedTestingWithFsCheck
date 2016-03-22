@@ -170,6 +170,10 @@ $ a \mod n = 0, \text{when } n = 1 $
 
 ---
 
+$ a \mod n < |n| $
+
+---
+
 ## <span class="altHeader">Identity</span>
 
 $ (a \mod n) \mod n = a \mod n $
