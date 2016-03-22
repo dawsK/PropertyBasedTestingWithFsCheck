@@ -1,4 +1,4 @@
-﻿namespace RomanNumeralsFSharp.AssemblyInfo
+﻿namespace PropertyBasedTestingDemo.AssemblyInfo
 
 open System.Reflection
 open System.Runtime.CompilerServices
@@ -7,11 +7,11 @@ open System.Runtime.InteropServices
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[<assembly: AssemblyTitle("RomanNumeralsFSharp")>]
+[<assembly: AssemblyTitle("PropertyBasedTestingDemo")>]
 [<assembly: AssemblyDescription("")>]
 [<assembly: AssemblyConfiguration("")>]
 [<assembly: AssemblyCompany("")>]
-[<assembly: AssemblyProduct("RomanNumeralsFSharp")>]
+[<assembly: AssemblyProduct("PropertyBasedTestingDemo")>]
 [<assembly: AssemblyCopyright("Copyright ©  2016")>]
 [<assembly: AssemblyTrademark("")>]
 [<assembly: AssemblyCulture("")>]
@@ -22,7 +22,7 @@ open System.Runtime.InteropServices
 [<assembly: ComVisible(false)>]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[<assembly: Guid("10e52051-2fd4-492a-8efb-1552dd25946c")>]
+[<assembly: Guid("813c417b-20b2-4806-b902-4328f3f5c8e0")>]
 
 // Version information for an assembly consists of the following four values:
 // 

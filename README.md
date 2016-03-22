@@ -4,9 +4,10 @@ F# and FsCheck are the perfect toolset when it comes to defining and testing pro
 
 See how F# and FsCheck work with your favorite unit testing framework to make property-based testing straight-forward, readable, and effective.
 
-## To Run
+## To Run Slides
 
-This slide deck uses [FsReveal](https://github.com/fsprojects/FsReveal). To run, open a console/terminal in the PropertyBasedTestingWithFsCheck folder.
+This slide deck uses [FsReveal](https://github.com/fsprojects/FsReveal). To run, open a console/terminal in the PropertyBasedTestingWithFsCheck/slides
+folder.
 
 If you're using Windows run
 
@@ -21,4 +22,6 @@ If you're using a Mac run
 ```
 
 This will start up a local HTTP server that hosts the slides and also fire up your browser to the right location to view them.
+
+## To View Demos
 

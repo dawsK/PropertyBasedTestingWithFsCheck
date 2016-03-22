@@ -6,14 +6,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>10e52051-2fd4-492a-8efb-1552dd25946c</ProjectGuid>
+    <ProjectGuid>813c417b-20b2-4806-b902-4328f3f5c8e0</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RomanNumeralsFSharp</RootNamespace>
-    <AssemblyName>RomanNumeralsFSharp</AssemblyName>
+    <RootNamespace>PropertyBasedTestingDemo</RootNamespace>
+    <AssemblyName>PropertyBasedTestingDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>RomanNumeralsFSharp</Name>
+    <Name>PropertyBasedTestingDemo</Name>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -25,7 +25,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\RomanNumeralsFSharp.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\PropertyBasedTestingDemo.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,7 +34,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\RomanNumeralsFSharp.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\PropertyBasedTestingDemo.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -54,7 +54,8 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Library1.fs" />
+    <Compile Include="Modulo.fs" />
+    <Compile Include="RomanNumerals.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,11 +83,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <ProjectReference Include="..\RomanNumeralsCSharp\RomanNumeralsCSharp.csproj">
-      <Name>RomanNumeralsCSharp</Name>
-      <Project>{5ddbc379-06a1-4de1-902d-9b19752041ab}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <Reference Include="xunit.abstractions">
       <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
       <Private>True</Private>

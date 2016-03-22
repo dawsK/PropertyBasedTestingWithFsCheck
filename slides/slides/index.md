@@ -302,31 +302,10 @@ The more things change, the more they stay the same
 
 *** 
 
-## When to Use Property-based Testing ##
-
----
-
-- Functions
-- Lots of possible inputs
-- Not for integration/slow tests
-
-
-' Functions with an easily defined input and output
-' If the input space and output space is small, example based testing is fine, just write tests for every scenario
-' Don't use them for integration style tests, or any test that is inherently slow. You will be calling your code lots of times
-
-
-
-
-
 ## Sites you <span class="accent">must</span> visit ##
 
-1. [http://fsharpforfunandprofit.com/ *](http://fsharpforfunandprofit.com/)
+1. [http://fsharpforfunandprofit.com/](http://fsharpforfunandprofit.com/)
 2. [http://blog.ploeh.dk/2015/01/10/diamond-kata-with-fscheck/](http://blog.ploeh.dk/2015/01/10/diamond-kata-with-fscheck/)
-3. 
-
-<br /><br />
-<div class="footnote">* Note: I stole a LOT of material from here for this presentation.</div>
 
 ***
 

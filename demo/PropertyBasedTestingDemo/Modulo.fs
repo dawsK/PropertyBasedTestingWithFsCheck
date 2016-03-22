@@ -1,5 +1,4 @@
-﻿module ModuloTests
-
+﻿module PropertyBasedTestingDemo.Modulo
 
 open Xunit
 open FsUnit.Xunit
@@ -11,7 +10,7 @@ module ExampleTests =
         match (m, n) with
         | (20, 3) -> 2
         | (3453234, 32) -> 18
-        | (_, _) -> 0     
+        | (_, _) -> 0
     
     [<Fact>]
     let ``10 % 5 should equal 0`` () =
@@ -26,8 +25,8 @@ module ExampleTests =
     let ``3453234 % 32 should equal 18`` () =
         modulo 3453234 32 |> should equal 18
 
-module PropertyTests =
 
+module PropertyTests =
     
     open FsCheck
     open FsCheck.Xunit
